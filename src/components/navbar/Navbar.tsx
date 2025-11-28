@@ -1,0 +1,94 @@
+import { HiOutlineMenuAlt4 } from 'react-icons/hi'
+import Logo from '../../assets/Images/logo.png'
+import { CiGift, CiHeart, CiSearch } from 'react-icons/ci'
+import { BsPersonCircle } from 'react-icons/bs'
+import { FiBarChart2 } from 'react-icons/fi'
+import { SlBasket } from 'react-icons/sl'
+
+const Navbar = () => {
+  return (
+    <div className="w-full">
+
+      <div className="w-full text-sm py-2">
+        <div className="max-w-[1300px] mx-auto flex justify-between items-center px-4">
+
+          <div className="flex gap-4 text-gray-700">
+            {[
+              'О компании', 'Оплата', 'Доставка', 'Возврат',
+              'Отзывы', 'Вопрос-ответ', 'Новости', 'Контакты'
+            ].map((item) => (
+              <a key={item} href="#" className="hover:text-blue-600 transition">
+                {item}
+              </a>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-5">
+            <p className="text-gray-600">Ежедневно, с 8:00 до 18:00</p>
+            <h2 className="font-bold text-blue-700 text-lg">8 800 444 00 65</h2>
+            <button className="text-blue-600 border border-blue-600 px-4 py-1 rounded hover:bg-blue-600 hover:text-white transition">
+              Заказать звонок
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="w-full bg-white py-4">
+        <div className="max-w-[1300px] mx-auto flex items-center justify-between px-4">
+
+          <img src={Logo} alt="Logo" className="w-[180px]" />
+
+          <button className="flex items-center gap-2 text-white bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition">
+            <HiOutlineMenuAlt4 size={22} />
+            <span className="font-medium">Каталог</span>
+          </button>
+
+          <div className="flex w-[500px]">
+            <input
+              type="text"
+              placeholder="Найти среди 50000 товаров. Например: Дрель Bosch"
+              className="w-full border border-blue-500 rounded-l-md px-4 py-2 focus:outline-none"
+            />
+            <button className="bg-blue-600 text-white px-4 rounded-r-md hover:bg-blue-700 transition">
+              <CiSearch size={25} />
+            </button>
+          </div>
+
+          <div className="flex items-center gap-6 text-gray-700">
+
+            <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
+              <CiGift size={28} />
+              <p>Все акции</p>
+            </div>
+
+            <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
+              <BsPersonCircle size={28} />
+              <p>Войти</p>
+            </div>
+
+            <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
+              <FiBarChart2 size={28} />
+              <p>Сравнение</p>
+            </div>
+
+            <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
+              <CiHeart size={28} />
+              <p>Избранное</p>
+            </div>
+
+            <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer relative">
+              <SlBasket size={28} />
+              <p>Корзина</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  )
+}
+
+export default Navbar
