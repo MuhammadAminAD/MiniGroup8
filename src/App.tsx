@@ -1,16 +1,15 @@
 import { Route, Routes } from "react-router-dom";
-import { Home, Oformel,  Aftoraziya,  Profile, Politka } from "./pages";
+import Navbar from "./components/navbar/Navbar";
+import AllComponenets from "./components/allCompanents/AllCompanents";
 
 
 export default function App() {
   return (
     <div>
+      <Navbar />
+      
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/oformel" element={<Oformel />} />
-        <Route path="/aftoraziya" element={<Aftoraziya />} />
-        <Route path="/politka" element={<Politka />} />
+        <Route path="/" element={<AllComponenets />} />
       </Routes>
     </div>
   )
