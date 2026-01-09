@@ -1,26 +1,10 @@
 {
   "favorites": [
     {
-      "id": 1,
-      "title": "Перфоратор универсальный Wander X645-46 GF 1450W",
-      "price": "12 789 ₽",
-      "oldPrice": "15 999 ₽",
-      "discount": "-15%",
-      "img": "/src/assets/Images/image9.png"
-    },
-    {
-      "id": 5,
-      "title": "Клей для напольных покрытий Poret",
-      "price": "12 789 ₽",
-      "oldPrice": "15 999 ₽",
-      "discount": "-15%",
-      "img": "/src/assets/Images/image13.png"
-    },
-    {
-      "id": 3,
-      "title": "Аккумуляторный шуруповерт «Гладиатор»",
+      "id": 2,
+      "title": "Смеситель Faris G-120 для раковины",
       "price": "1 789 ₽",
-      "img": "/src/assets/Images/product3.png"
+      "img": "/src/assets/Images/image10.png"
     }
   ],
   "basket": [
@@ -29,25 +13,6 @@
       "title": "Смеситель Faris G-120 для раковины",
       "price": "1 789 ₽",
       "img": "/src/assets/Images/image10.png",
-      "count": 1
-    },
-    {
-      "id": 4,
-      "title": "Унитаз подвесной Aragio с двойным сливом",
-      "price": "12 789 ₽",
-      "oldPrice": "15 999 ₽",
-      "discount": "-12%",
-      "img": "/src/assets/Images/image12.png",
-      "count": 1
-    },
-    {
-      "id": 4,
-      "title": "Унитаз подвесной Aragio с двойным сливом",
-      "price": "12 789 ₽",
-      "oldPrice": "15 999 ₽",
-      "discount": "-12%",
-      "img": "/src/assets/Images/product4.png",
-      "badge": "новинка",
       "count": 1
     }
   ]

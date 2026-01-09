@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Favorites from "./pages/favorites/Favorites";
-import Cart from "./pages/cart/Cart";
+import Cart from "./pages/basket/Basket";
 import AllComponenets from "./allComponents/AllComponenets";
 
 

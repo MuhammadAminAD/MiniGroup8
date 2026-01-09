@@ -1,4 +1,6 @@
-function Cart() {
+
+
+function Basket() {
   return (
     <div>
       
@@ -6,4 +8,4 @@ function Cart() {
   )
 }
 
-export default Cart
+export default Basket
