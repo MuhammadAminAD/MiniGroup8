@@ -2,11 +2,11 @@ import { CiHeart } from 'react-icons/ci'
 import { FiBarChart2 } from 'react-icons/fi'
 import { SlBasket } from 'react-icons/sl'
 
-import FirstProduct from '../../../assets/Images/product1.png'
-import SecondProduct from '../../../assets/Images/product2.png'
-import ThirdProduct from '../../../assets/Images/product3.png'
-import FourthProduct from '../../../assets/Images/product4.png'
-import FifthProduct from '../../../assets/Images/product5.png'
+import FirstProduct from '../../assets/Images/product1.png'
+import SecondProduct from '../../assets/Images/product2.png'
+import ThirdProduct from '../../assets/Images/product3.png'
+import FourthProduct from '../../assets/Images/product4.png'
+import FifthProduct from '../../assets/Images/product5.png'
 
 type Product = {
   id: number

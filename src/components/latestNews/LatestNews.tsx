@@ -1,7 +1,7 @@
-import Img1 from "../../../assets/images/news1.png"
-import Img2 from "../../../assets/images/news2.png"
-import Img3 from "../../../assets/images/news3.png"
-import Img4 from "../../../assets/images/news4.png"
+import Img1 from "../../assets/images/news1.png"
+import Img2 from "../../assets/images/news2.png"
+import Img3 from "../../assets/images/news3.png"
+import Img4 from "../../assets/images/news4.png"
 
 export default function LatestNews() {
   const news = [

@@ -1,4 +1,4 @@
-import BgImage from "../../../assets/images/background5.png"
+import BgImage from "../../assets/images/background5.png"
 
 export default function AboutSection() {
     return (

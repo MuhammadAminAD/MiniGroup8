@@ -1,8 +1,8 @@
-import FirstProduct from '../../../assets/Images/image9.png'
-import SecondProduct from '../../../assets/Images/image10.png'
-import ThirdProduct from '../../../assets/Images/image11.png'
-import FourthProduct from '../../../assets/Images/image12.png'
-import FifthProduct from '../../../assets/Images/image13.png'
+import FirstProduct from '../../assets/Images/image9.png'
+import SecondProduct from '../../assets/Images/image10.png'
+import ThirdProduct from '../../assets/Images/image11.png'
+import FourthProduct from '../../assets/Images/image12.png'
+import FifthProduct from '../../assets/Images/image13.png'
 
 import { CiHeart } from 'react-icons/ci'
 import { FiBarChart2 } from 'react-icons/fi'

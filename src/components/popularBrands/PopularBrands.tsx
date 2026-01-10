@@ -1,10 +1,10 @@
-import FirstBrand from '../../../assets/Images/brand1.png';
-import SecondBrand from '../../../assets/Images/brand2.png';
-import ThirdBrand from '../../../assets/Images/brand3.png';
-import FourthBrand from '../../../assets/Images/brand4.png';
-import FifthBrand from '../../../assets/Images/brand5.png';
-import SixthBrand from '../../../assets/Images/brand6.png';
-import SeventhBrand from '../../../assets/Images/brand7.png';
+import FirstBrand from '../../assets/Images/brand1.png';
+import SecondBrand from '../../assets/Images/brand2.png';
+import ThirdBrand from '../../assets/Images/brand3.png';
+import FourthBrand from '../../assets/Images/brand4.png';
+import FifthBrand from '../../assets/Images/brand5.png';
+import SixthBrand from '../../assets/Images/brand6.png';
+import SeventhBrand from '../../assets/Images/brand7.png';
 
 const brands = [
   { id: 1, img: FirstBrand },

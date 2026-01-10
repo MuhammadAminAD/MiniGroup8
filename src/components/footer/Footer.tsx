@@ -1,11 +1,11 @@
-import { IoSend } from "react-icons/io5";
-import Logo from "../../assets//Images/logo.png";
-import FirstCard from "../../assets/Images/card1.png";
-import SecondCard from "../../assets/Images/card2.png";
-import ThirdCard from "../../assets/Images/card3.png";
-import FourthCard from "../../assets/Images/card4.png";
-import FifthCard from "../../assets/Images/card5.png";
-import SixthCard from "../../assets/Images/card6.png";
+import { IoSend } from "react-icons/io5"
+import Logo from "../../assets/Images/logo.png"
+import FirstCard from "../../assets/Images/card1.png"
+import SecondCard from "../../assets/Images/card2.png"
+import ThirdCard from "../../assets/Images/card3.png"
+import FourthCard from "../../assets/Images/card4.png"
+import FifthCard from "../../assets/Images/card5.png"
+import SixthCard from "../../assets/Images/card6.png"
 import FinishImg from "../../assets/Images/finishImg.png"
 
 export default function Footer() {
@@ -16,176 +16,273 @@ export default function Footer() {
     FourthCard,
     FifthCard,
     SixthCard,
-  ];
+  ]
+
   return (
-    <div className="bg-gray-100 m-auto">
-      <div className="w-[1280px] h-[136px] flex mx-auto px-4 py-6 flex items-center justify-between">
+    <footer className="bg-gray-100">
 
-        <div className="flex items-center gap-3">
-          <img src={Logo} alt="logo" className="w-[215px]" />
-        </div>
+      <div className="md:hidden px-4 py-6 space-y-6">
+     
+        <div>
+          <img src={Logo} alt="logo" className="h-8 mb-3" />
 
-        <p className="text-[13px] ml-[-60px]">ООО «Стройоптторг» </p>
+          <p className="text-lg font-semibold">8 800 444 00 65</p>
+          <p className="text-xs text-gray-500 mb-2">
+            Ежедневно, с 8:00 до 18:00
+          </p>
 
-        <div className="flex w-[250px] justify-between mt-2">
-          <div>
-            <p className="text-[11px] text-gray-600">ИНН: 0901051787</p>
-            <p className="text-[11px] text-gray-600">КПП 090101001</p>
-          </div>
-
-          <div>
-            <p className="text-[13px]">Email:</p>
-            <p
-              className="text-[11px] text-blue-500"
-            >
-              info@stroiopttorg.ru
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center gap-5">
-          <div className="leading-tight">
-            <p className="text-[15px] font-semibold text-gray-900">
-              8 800 444 00 65
-            </p>
-            <span className="text-[11px] text-gray-500">
-              Ежедневно, с 8:00 до 18:00
-            </span>
-          </div>
-
-          <button
-            className="
-              border border-red-400 text-black-500 text-xs
-              px-5 py-2 rounded-md cursor-pointer
-            "
-          >
+          <button className="border border-red-400 px-4 py-2 text-xs rounded-md">
             ЗАКАЗАТЬ ЗВОНОК
           </button>
-        </div>
 
-      </div>
-      <div className="w-[1280px] ml-35 border-t border-gray-300 pt-6 mb-6 mx-auto flex justify-between">
-
-        <div className="flex flex-col gap-2 w-[220px]">
-          <p className="text-sm font-semibold text-gray-900 mb-3">Информация</p>
-
-          <p className="text-[12px] text-gray-600">О компании</p>
-          <p className="text-[12px] text-gray-600">Оплата</p>
-          <p className="text-[12px] text-gray-600">Доставка</p>
-          <p className="text-[12px] text-gray-600">Возврат</p>
-          <p className="text-[12px] text-gray-600">Отзывы</p>
-        </div>
-
-        <div className="flex flex-col gap-2 w-[220px]">
-          <p className="text-sm font-semibold text-gray-900 mb-3 opacity-0">
-            ""
+          <p className="text-xs mt-3">
+            Email: <span className="text-blue-500">info@stroiopttorg.ru</span>
           </p>
-
-          <p className="text-[12px] text-gray-600">Вопрос-ответ</p>
-          <p className="text-[12px] text-gray-600">Новости</p>
-          <p className="text-[12px] text-gray-600">Контакты</p>
-          <p className="text-[12px] text-gray-600">Вход / Регистрация</p>
-          <p className="text-[12px] text-gray-600">Все акции</p>
         </div>
 
-        <div className="flex flex-col gap-2 w-[220px]">
-          <p className="text-sm font-semibold text-gray-900 mb-3">Каталог</p>
+        <details className="border-t pt-3">
+          <summary className="font-semibold cursor-pointer">Информация</summary>
+          <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-gray-600">
+            <p>О компании</p><p>Оплата</p>
+            <p>Доставка</p><p>Возврат</p>
+            <p>Отзывы</p><p>Вопрос-ответ</p>
+            <p>Новости</p><p>Контакты</p>
+            <p>Вход / Регистрация</p><p>Все акции</p>
+          </div>
+        </details>
 
-          <p className="text-[12px] text-gray-600">Общестроительные материалы</p>
-          <p className="text-[12px] text-gray-600">Все для сауны и бани</p>
-          <p className="text-[12px] text-gray-600">Инструмент</p>
-          <p className="text-[12px] text-gray-600">Отделочные материалы</p>
-          <p className="text-[12px] text-gray-600">Товары для дома, сада и огорода</p>
-        </div>
+        <details className="border-t pt-3">
+          <summary className="font-semibold cursor-pointer">Каталог</summary>
+          <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 text-sm text-gray-600">
+            <p>Общестроительные материалы</p>
+            <p>Инструмент</p>
+            <p>Сантехника</p>
+            <p>Отделочные материалы</p>
+            <p>Товары для дома и сада</p>
+          </div>
+        </details>
 
-        <div className="flex flex-col gap-2 w-[220px]">
-          <p className="text-sm font-semibold text-gray-900 mb-3 opacity-0">
-            ""
-          </p>
-
-          <p className="text-[12px] text-gray-600">Электротовары</p>
-          <p className="text-[12px] text-gray-600">Сантехника</p>
-          <p className="text-[12px] text-gray-600">Столярные изделия</p>
-          <p className="text-[12px] text-gray-600">
-            Спецодежда и средства индивидуальной пожарной защиты
-          </p>
-
-
-        </div>
-        <div className="flex flex-col gap-2 w-[220px]">
-          <p className="text-sm font-semibold text-gray-900 mb-3 opacity-0">
-            ""
-          </p>
-
-          <p className="text-[13px] text-gray-600">
-            Водо-газоснабжение, отопление, вентиляция
-          </p>
-          <p className="text-[13px] text-gray-600">Метизы, такелажные и скобяные изделия</p>
-        </div>
-      </div>
-
-      <div className="w-[1280px] border-t border-gray-300 pt-5 pb-6 mx-auto flex items-center justify-between px-4">
-
-        <div className="flex items-center gap-6">
-          <span className="text-gray-500 text-sm">Мы принимаем к <br /> оплате:</span>
-
-          <div className="flex items-center ml-[50px] gap-5">
+        <div className="border-t pt-4">
+          <p className="text-sm mb-2">Мы принимаем к оплате:</p>
+          <div className="flex flex-wrap gap-4">
             {cards.map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt=""
-                className="h-[15px] w-[50px] opacity-40 object-contain"
-              />
+              <img key={i} src={src} className="h-4 opacity-40" />
             ))}
           </div>
         </div>
 
-        <div className="flex items-center gap-6">
-          <span className="text-black-600 text-[15px] leading-tight">
-            Подпишитесь на рассылку <br /> и будьте в курсе!
-          </span>
-
+        <div className="border-t pt-4">
+          <p className="text-sm mb-2">Подпишитесь на рассылку</p>
           <div className="relative">
             <input
-              type="email"
               placeholder="Ваш email"
-              className="w-[280px] rounded-md py-3 pr-9 pl-4 text-sm bg-white border border-gray-200 focus:outline-none"
+              className="w-full py-3 px-4 pr-10 rounded-md text-sm"
             />
-
-            <button
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-600 hover:text-black"
-            >
-              <IoSend />
-            </button>
+            <IoSend className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500" />
           </div>
         </div>
+
+        <div className="border-t pt-4 text-[10px] text-gray-500 text-center flex flex-col items-center gap-2">
+          <p>© 2003–2023 ООО «Стройоптторг»</p>
+          <a href="#" className="underline">Политика конфиденциальности</a>
+          <img src={FinishImg} className="h-4 opacity-50" />
+        </div>
       </div>
 
-      <div className="w-[1280px] mx-auto border-t border-gray-300 pt-6 pb-6 flex items-center justify-between px-4">
+      <div className="hidden md:block lg:hidden">
 
-        <div className="text-gray-500 text-[10px] leading-relaxed max-w-lg">
-          © 2003–2023 Интернет-магазин ООО «Стройоптторг» р/с 4070281030000102415<br />
-          в Ставропольское отделение №5230 ПАО Сбербанк, БИК 040702615
+        <div className="px-6 py-6 flex items-start justify-between gap-6">
+          <img src={Logo} className="w-[160px]" />
+
+          <div className="text-sm">
+            <p>Email:</p>
+            <p className="text-blue-500">info@stroiopttorg.ru</p>
+          </div>
+
+          <div>
+            <p className="font-semibold text-lg">8 800 444 00 65</p>
+            <p className="text-xs text-gray-500">
+              Ежедневно, с 8:00 до 18:00
+            </p>
+          </div>
+
+          <button className="border border-red-400 px-4 py-2 text-xs rounded-md h-fit">
+            ЗАКАЗАТЬ ЗВОНОК
+          </button>
         </div>
 
-        <div className="flex flex-col items-end gap-2">
-          <img
-            src={FinishImg}
-            alt="#"
-            className="h-5 opacity-60 object-contain"
-          />
+        <div className="border-t px-6 py-8 grid grid-cols-2 gap-10 text-sm text-gray-600">
+
+          <div>
+            <p className="font-semibold mb-4 text-gray-900">Информация</p>
+            <div className="grid grid-cols-2 gap-y-2">
+              <p>О компании</p><p>Вопрос-ответ</p>
+              <p>Оплата</p><p>Новости</p>
+              <p>Доставка</p><p>Контакты</p>
+              <p>Возврат</p><p>Вход / Регистрация</p>
+              <p>Отзывы</p><p>Все акции</p>
+            </div>
+          </div>
+
+          <div>
+            <p className="font-semibold mb-4 text-gray-900">Каталог</p>
+            <div className="grid grid-cols-2 gap-y-2">
+              <p>Общестроительные материалы</p>
+              <p>Электротовары</p>
+              <p>Все для сауны и бани</p>
+              <p>Сантехника</p>
+              <p>Инструмент</p>
+              <p>Столярные изделия</p>
+              <p>Отделочные материалы</p>
+              <p>Спецодежда и СИЗ</p>
+              <p>Товары для дома и сада</p>
+              <p>Метизы и такелаж</p>
+            </div>
+          </div>
+
         </div>
-        
-        <a
-          href="#"
-          className="text-gray-600 text-[10px] underline"
-        >
-          Политика конфиденциальности
-        </a>
+
+        <div className="border-t px-6 py-6 space-y-4">
+
+          <div className="flex flex-wrap items-center gap-4">
+            <span className="text-sm text-gray-500">
+              Мы принимаем к оплате:
+            </span>
+            {cards.map((src, i) => (
+              <img key={i} src={src} className="h-4 opacity-40" />
+            ))}
+          </div>
+
+          <div className="flex items-center gap-4">
+            <span className="text-sm">
+              Подпишитесь на рассылку<br />и будьте в курсе!
+            </span>
+            <div className="relative">
+              <input
+                placeholder="Ваш email"
+                className="w-[240px] py-2 px-4 pr-10 rounded-md text-sm border"
+              />
+              <IoSend className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500" />
+            </div>
+          </div>
+
+        </div>
+
+        <div className="border-t px-6 py-4 flex justify-between items-center text-[11px] text-gray-500">
+          <p>© 2003–2023 Интернет-магазин ООО «Стройоптторг»</p>
+          <img src={FinishImg} className="h-4 opacity-60" />
+          <a href="#" className="underline">Политика конфиденциальности</a>
+        </div>
 
       </div>
 
-    </div>
-  );
+      <div className="hidden md:block">
+
+        <div className="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
+          <img src={Logo} className="w-[200px]" />
+          <div className="hidden lg:block text-sm text-gray-600">
+            <p>ООО «Стройоптторг»</p>
+            <p>ИНН: 0901051787</p>
+            <p>КПП: 090101001</p>
+          </div>
+
+
+          <div className="text-sm">
+            <p>Email:</p>
+            <p className="text-blue-500">info@stroiopttorg.ru</p>
+          </div>
+
+          <div className="text-right">
+            <p className="font-semibold text-lg">8 800 444 00 65</p>
+            <p className="text-xs text-gray-500">
+              Ежедневно, с 8:00 до 18:00
+            </p>
+          </div>
+
+          <button className="border border-red-400 px-5 py-2 text-xs rounded-md">
+            ЗАКАЗАТЬ ЗВОНОК
+          </button>
+        </div>
+
+        <div className="border-t">
+          <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-5 gap-10 text-sm text-gray-600">
+
+            <div className="col-span-2">
+              <p className="font-semibold mb-4 text-gray-900">Информация</p>
+              <div className="grid grid-cols-2 gap-y-2">
+                <p>О компании</p><p>Вопрос-ответ</p>
+                <p>Оплата</p><p>Новости</p>
+                <p>Доставка</p><p>Контакты</p>
+                <p>Возврат</p><p>Вход / Регистрация</p>
+                <p>Отзывы</p><p>Все акции</p>
+              </div>
+            </div>
+
+            <div className="col-span-3">
+              <p className="font-semibold mb-4 text-gray-900">Каталог</p>
+              <div className="grid grid-cols-3 gap-y-2">
+                <p>Общестроительные материалы</p>
+                <p>Электротовары</p>
+                <p>Водо-газоснабжение, отопление, вентиляция</p>
+
+                <p>Все для сауны и бани</p>
+                <p>Сантехника</p>
+                <p>Метизы и такелаж</p>
+
+                <p>Инструмент</p>
+                <p>Столярные изделия</p>
+                <p></p>
+
+                <p>Отделочные материалы</p>
+                <p>Спецодежда и СИЗ</p>
+                <p></p>
+
+                <p>Товары для дома и сада</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="border-t">
+          <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+
+            <div className="flex items-center gap-6">
+              <span className="text-sm text-gray-500">
+                Мы принимаем к оплате:
+              </span>
+              <div className="flex gap-4">
+                {cards.map((src, i) => (
+                  <img key={i} src={src} className="h-4 opacity-40" />
+                ))}
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4">
+              <span className="text-sm">
+                Подпишитесь на рассылку<br />и будьте в курсе!
+              </span>
+              <div className="relative">
+                <input
+                  placeholder="Ваш email"
+                  className="w-[260px] py-2 px-4 pr-10 rounded-md text-sm border"
+                />
+                <IoSend className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div className="border-t">
+          <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center text-[11px] text-gray-500">
+            <p>© 2003–2023 Интернет-магазин ООО «Стройоптторг»</p>
+            <img src={FinishImg} className="h-4 opacity-60" />
+            <a href="#" className="underline">Политика конфиденциальности</a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  )
 }
