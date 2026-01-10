@@ -14,5 +14,13 @@
       "img": "/src/assets/Images/image11.png"
     }
   ],
-  "cart": []
+  "basket": [
+    {
+      "id": 2,
+      "title": "Смеситель Faris G-120 для раковины",
+      "price": "1 789 ₽",
+      "img": "/src/assets/Images/image10.png",
+      "count": 1
+    }
+  ]
 }
