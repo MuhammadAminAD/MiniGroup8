@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import AllComponenets from "./components/allCompanents/AllCompanents";
+import Favorites from "./pages/favorites/Favorites";
+import Cart from "./pages/basket/Basket";
+import AllComponenets from "./allComponents/Allcomponents";
 
 
 export default function App() {
@@ -10,6 +12,8 @@ export default function App() {
       
       <Routes>
         <Route path="/" element={<AllComponenets />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </div>
   )
