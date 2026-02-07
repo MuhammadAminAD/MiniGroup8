@@ -1,6 +1,5 @@
 import { useState } from "react";
 import type { LoginFormData } from "../../types/orderLogin";
-import { FiEye, FiEyeOff, FiUserPlus } from "react-icons/fi";
 
 function Soz() {
   const [showPassword, setShowPassword] = useState(false);
@@ -67,7 +66,7 @@ function Soz() {
               onClick={() => setShowPassword(!showPassword)}
               className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400"
             >
-              {showPassword ? <FiEyeOff size={16} /> : <FiEye size={16} />}
+            
             </button>
           </div>
           <button className="text-xs text-blue-600 mb-5 hover:underline">
@@ -91,7 +90,7 @@ function Soz() {
         <div className="flex flex-col justify-center">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-8 h-8 rounded-full border border-red-400 text-red-500 flex items-center justify-center">
-              <FiUserPlus size={16} />
+           
             </div>
             <h2 className="text-lg font-semibold">
               Еще нет аккаунта?
