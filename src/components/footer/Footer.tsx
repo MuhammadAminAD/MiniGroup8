@@ -1,5 +1,4 @@
 import React from "react";
-import { IoSend } from "react-icons/io5";
 
 import Logo from "../../assets/Images/logo.png";
 import FirstCard from "../../assets/Images/card1.png";
@@ -149,9 +148,7 @@ const Footer: React.FC = () => {
               className="w-[280px] rounded-md py-3 pr-9 pl-4 text-sm bg-white border border-gray-200 focus:outline-none"
             />
 
-            <button className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-600 hover:text-black">
-              <IoSend />
-            </button>
+            
           </div>
         </div>
       </div>

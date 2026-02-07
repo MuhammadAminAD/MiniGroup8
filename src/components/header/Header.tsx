@@ -1,11 +1,7 @@
 import React from "react";
 import FirstImage from "../../assets/Images/image1.png";
 
-interface HeaderProps {
-  Icon?: React.ComponentType<any>;
-}
-
-const Header: React.FC<HeaderProps> = ({ Icon }) => {
+const Header: React.FC = () => {
   return (
     <div
       className="relative w-[1280px] h-[506px] m-auto mt-10 rounded-xl overflow-hidden"
@@ -25,10 +21,8 @@ const Header: React.FC<HeaderProps> = ({ Icon }) => {
           а также других сопутствующих товаров.
         </p>
 
-        <button className="mt-6 flex items-center gap-2 bg-black text-white px-5 py-2 rounded-md font-medium">
+        <button className="mt-6 bg-black text-white px-5 py-2 rounded-md font-medium">
           перейти к товарам
-          {Icon && <Icon size={20} />}
-
         </button>
       </div>
     </div>
