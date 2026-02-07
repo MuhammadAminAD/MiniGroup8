@@ -1,9 +1,4 @@
-import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import Logo from '../../assets/Images/logo.png'
-import { CiGift, CiHeart, CiSearch } from 'react-icons/ci'
-import { BsPersonCircle } from 'react-icons/bs'
-import { FiBarChart2 } from 'react-icons/fi'
-import { SlBasket } from 'react-icons/sl'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -43,7 +38,7 @@ const Navbar = () => {
           </Link>
           
           <button className="flex items-center gap-2 text-white bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700 transition">
-            <HiOutlineMenuAlt4 size={22} />
+        
             <span className="font-medium">Каталог</span>
           </button>
 
@@ -54,37 +49,37 @@ const Navbar = () => {
               className="w-full border border-blue-500 rounded-l-md px-4 py-2 focus:outline-none"
             />
             <button className="bg-blue-600 text-white px-4 rounded-r-md hover:bg-blue-700 transition">
-              <CiSearch size={25} />
+          
             </button>
           </div>
 
           <div className="flex items-center gap-6 text-gray-700">
 
             <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
-              <CiGift size={28} />
+            
               <p>Все акции</p>
             </div>
 
             <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
-              <BsPersonCircle size={28} />
+            
               <p>Войти</p>
             </div>
 
             <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
-              <FiBarChart2 size={28} />
+              
               <p>Сравнение</p>
             </div>
 
             <Link to="/favorites">
               <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
-                <CiHeart size={28} />
+               
                 <p>Избранное</p>
               </div>
             </Link>
 
             <Link to="/cart">
               <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer relative">
-                <SlBasket size={28} />
+              
                 <p>Корзина</p>
               </div>
             </Link>
