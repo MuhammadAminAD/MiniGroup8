@@ -1,22 +1,33 @@
-import { CiHeart } from 'react-icons/ci'
-import { FiBarChart2 } from 'react-icons/fi'
-import { SlBasket } from 'react-icons/sl'
+import React from "react";
+import { IconType } from "react-icons";
 
-import FirstProduct from '../../assets/Images/product1.png'
-import SecondProduct from '../../assets/Images/product2.png'
-import ThirdProduct from '../../assets/Images/product3.png'
-import FourthProduct from '../../assets/Images/product4.png'
-import FifthProduct from '../../assets/Images/product5.png'
+import { CiHeart } from "react-icons/ci";
+import { FiBarChart2 } from "react-icons/fi";
+import { SlBasket } from "react-icons/sl";
 
-type Product = {
-  id: number
-  title: string
-  price: string
-  oldPrice?: string
-  discount?: string
-  img: string
-  badge?: string
-}
+import FirstProduct from "../../assets/Images/product1.png";
+import SecondProduct from "../../assets/Images/product2.png";
+import ThirdProduct from "../../assets/Images/product3.png";
+import FourthProduct from "../../assets/Images/product4.png";
+import FifthProduct from "../../assets/Images/product5.png";
+
+
+export type Product = {
+  id: number;
+  title: string;
+  price: string;
+  oldPrice?: string;
+  discount?: string;
+  img: string;
+  badge?: "распродажа" | "новинка";
+};
+
+type ActionIcon = {
+  Icon: IconType;
+  onClick?: () => void;
+  className?: string;
+};
+
 
 const products: Product[] = [
   {
@@ -59,40 +70,36 @@ const products: Product[] = [
     discount: "-16%",
     img: FifthProduct,
   },
-]
+];
 
-const BestOffers = () => {
 
+const BestOffers: React.FC = () => {
   const addToFavorites = async (product: Product) => {
     try {
-      await fetch('http://localhost:3000/favorites', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      await fetch("http://localhost:3000/favorites", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(product),
-      })
+      });
     } catch (error) {
-      console.error('Favorites ga qo‘shishda xatolik:', error)
+      console.error("Favorites ga qo‘shishda xatolik:", error);
     }
-  }
+  };
 
   const addToBasket = async (product: Product) => {
     try {
-      await fetch('http://localhost:3000/basket', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      await fetch("http://localhost:3000/basket", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...product,
           count: 1,
         }),
-      })
+      });
     } catch (error) {
-      console.error('Basket ga qo‘shishda xatolik:', error)
+      console.error("Basket ga qo‘shishda xatolik:", error);
     }
-  }
+  };
 
   return (
     <section className="w-[1280px] m-auto mt-[90px]">
@@ -114,79 +121,91 @@ const BestOffers = () => {
       </div>
 
       <div className="grid grid-cols-1 mt-[50px] sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-6">
-        {products.map((p) => (
-          <div
-            key={p.id}
-            className="border rounded-xl p-4 bg-white hover:shadow-lg transition relative"
-          >
-            {p.badge && (
-              <span
-                className={`absolute top-3 left-3 text-xs px-2 py-0.5 rounded ${
-                  p.badge === "распродажа"
-                    ? "bg-red-100 text-red-500"
-                    : "bg-green-100 text-green-600"
-                }`}
-              >
-                {p.badge}
-              </span>
-            )}
+        {products.map((product) => {
+          const actionIcons: ActionIcon[] = [
+            {
+              Icon: CiHeart,
+              onClick: () => addToFavorites(product),
+              className: "hover:text-red-500",
+            },
+            {
+              Icon: FiBarChart2,
+            },
+          ];
 
-            <img
-              src={p.img}
-              alt={p.title}
-              className="w-full h-36 object-contain mb-4"
-            />
-
-            <p className="text-sm leading-tight h-12 mb-2">
-              {p.title}
-            </p>
-
-            <p className="text-xs text-gray-400 mb-2">
-              Артикул: XJ89YHG0
-            </p><div className="mb-4">
-              {p.oldPrice && (
-                <span className="text-xs text-gray-400 line-through mr-2">
-                  {p.oldPrice}
-                </span>
-              )}
-              <span className="text-lg font-semibold">
-                {p.price}
-              </span>
-              {p.discount && (
-                <span className="text-green-600 text-sm ml-2">
-                  {p.discount}
-                </span>
-              )}
-            </div>
-
-            <div className="flex justify-between items-center">
-            
-              <button
-                className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-xl"
-                onClick={() => addToBasket(p)}
-              >
-                <SlBasket /> Купить
-              </button>
-
-              <div className="flex gap-3 text-gray-500">
-             
-                <button
-                  className="border px-2 py-2 rounded-xl cursor-pointer hover:text-red-500"
-                  onClick={() => addToFavorites(p)}
+          return (
+            <div
+              key={product.id}
+              className="border rounded-xl p-4 bg-white hover:shadow-lg transition relative"
+            >
+              {product.badge && (
+                <span
+                  className={`absolute top-3 left-3 text-xs px-2 py-0.5 rounded ${
+                    product.badge === "распродажа"
+                      ? "bg-red-100 text-red-500"
+                      : "bg-green-100 text-green-600"
+                  }`}
                 >
-                  <CiHeart />
+                  {product.badge}
+                </span>
+              )}
+
+              <img
+                src={product.img}
+                alt={product.title}
+                className="w-full h-36 object-contain mb-4"
+              />
+
+              <p className="text-sm leading-tight h-12 mb-2">
+                {product.title}
+              </p>
+
+              <p className="text-xs text-gray-400 mb-2">
+                Артикул: XJ89YHG0
+              </p>
+
+              <div className="mb-4">
+                {product.oldPrice && (
+                  <span className="text-xs text-gray-400 line-through mr-2">
+                    {product.oldPrice}
+                  </span>
+                )}
+                <span className="text-lg font-semibold">
+                  {product.price}
+                </span>
+                {product.discount && (
+                  <span className="text-green-600 text-sm ml-2">
+                    {product.discount}
+                  </span>
+                )}
+              </div>
+
+              <div className="flex justify-between items-center">
+                <button
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-xl"
+                  onClick={() => addToBasket(product)}
+                >
+                  <SlBasket /> Купить
                 </button>
 
-                <button className="border px-2 py-2 rounded-xl cursor-pointer">
-                  <FiBarChart2 />
-                </button>
+                <div className="flex gap-3 text-gray-500">
+                  {actionIcons.map(({ Icon, onClick, className }, idx) => (
+                    <button
+                      key={idx}
+                      onClick={onClick}
+                      className={`border px-2 py-2 rounded-xl cursor-pointer ${className ?? ""}`}
+                    >
+                      <Icon />
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default BestOffers
+export default BestOffers;

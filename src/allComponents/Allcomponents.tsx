@@ -1,4 +1,4 @@
-import Header from "@/components/header/Header"
+
 import Parts from "@/components/parts/Parts"
 import CategoryItem from "@/components/categoryItem/CategoryItem"
 import SaleItem from "@/components/saleItem/SaleItem"
@@ -8,6 +8,7 @@ import PopularBrands from "@/components/popularBrands/PopularBrands"
 import BestOffers from "@/components/bestOffers/BestOffers"
 import AboutSection from "@/components/aboutSection/AboutSection"
 import LatestNews from "@/components/latestNews/LatestNews"
+import Header from "@/components/header/Header"
 
 
 function AllComponenets() {
