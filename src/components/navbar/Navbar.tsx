@@ -1,5 +1,11 @@
 import Logo from '../../assets/Images/logo.png'
 import { Link } from 'react-router-dom'
+import Icon1 from '../../assets/icons/icon1.png'
+import Icon2 from '../../assets/icons/icon2.png'
+import Icon3 from '../../assets/icons/icon3.png'
+import Icon4 from '../../assets/icons/icon4.png'
+import Icon5 from '../../assets/icons/icon5.png'
+
 
 const Navbar = () => {
   return (
@@ -56,30 +62,30 @@ const Navbar = () => {
           <div className="flex items-center gap-6 text-gray-700">
 
             <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
-            
+              <img src={Icon1} alt="Icon 1" className="w-7 h-6" />
               <p>Все акции</p>
             </div>
 
             <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
-            
+              <img src={Icon2} alt="Icon 2" className="w-7 h-6" />
               <p>Войти</p>
             </div>
 
             <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
-              
+              <img src={Icon3} alt="Icon 3" className="w-7 h-6" />
               <p>Сравнение</p>
             </div>
 
             <Link to="/favorites">
               <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer">
-               
+                <img src={Icon4} alt="Icon 4" className="w-7 h-6" />
                 <p>Избранное</p>
               </div>
             </Link>
 
             <Link to="/cart">
               <div className="flex flex-col items-center text-sm hover:text-blue-600 cursor-pointer relative">
-              
+                <img src={Icon5} alt="Icon 5" className="w-7 h-6" />
                 <p>Корзина</p>
               </div>
             </Link>
